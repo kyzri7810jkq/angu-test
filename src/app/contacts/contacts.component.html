@@ -1,2 +1,13 @@
-<p>contacts works!</p>
-<h1>Hello {{ firstname }} {{ lastname }}</h1>
+<form [formGroup]="contactForm" >
+	<input type="text" formControlName="userName" placeholder="Please type yourname"><br>
+
+	<div *ngIf="userName.invalid && (userName.dirty || userName.touched)">
+		<div *ngIf="userName.errors.minLength">
+			Please make it more than 3 
+		</div>
+	</div>
+
+	<textarea formControlName="message"></textarea><br>
+
+	<input type="submit" value="Submit">
+</form>

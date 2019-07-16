@@ -1,0 +1,26 @@
+
+// after git clone
+$ npm install
+
+// fresh start
+
+$ ng add @angular/material
+
+$ ng g c componentName
+
+$ ng serve
+
+$ ng generate service auth
+
+
+$ ng generate class User
+----------------------------------------------
+
+Forms
+1. go to app.module.ts
+- add ReactiveFormsModule and imports
+2. FormGroup vs FormControl
+formGroup - entire form
+formCOntrol - each field
+
+2. Reactive vs template-driven
