@@ -8,22 +8,24 @@ import { FormGroup, FormControl, Validators  } from '@angular/forms';
 })
 export class EmployeeComponent implements OnInit {
 
-  employeefrm = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl('', Validators.email),
-    age: new FormControl(''),
-    salary: new FormControl('', 
-    Validators.required
-    )
-  });
+  employeefrm: FormGroup;
 
   constructor() { }
 
   ngOnInit() {
+    this.employeefrm = new FormGroup({
+      name: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.email , Validators.required ]),
+      age: new FormControl(''),
+      salary: new FormControl('', Validators.required)
+    });
   }
 
-  submitForm(frm) {
-    Event.prototype.preventDefault() 
-    console.log(frm.value)
+  submitForm() {
+    if(this.employeefrm.status == 'INVALID'){
+      console.log('OPPS')
+    }else{
+      console.log('success')
+    }
   }
 }
