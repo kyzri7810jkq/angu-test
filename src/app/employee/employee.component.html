@@ -1,1 +1,12 @@
 <p>employee works!</p>
+<form [FormGroup]="employeefrm" (ngSubmit)="submitForm(employeefrm)">
+    <label for="name">Name</label><br>
+    <input type="text" id="name" placeholder="Your Name"><br><br>
+    <label for="email">Email</label><br>
+    <input type="text" id="email" placeholder="Your Email"><br><br>
+    <label for="age">Age</label>
+    <input type="text" id="age"><br>
+    <label for="salary">Salary</label><br><br>
+
+    <input type="submit" value="Compute">
+</form>
