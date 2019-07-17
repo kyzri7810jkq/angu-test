@@ -10,13 +10,20 @@ $ ng g c componentName
 
 $ ng serve
 
-$ ng generate service auth
+$ ng generate service student/student
 
 $ ng generate class User
 
 $ ng g module Module_name
 ----------------------------------------------
+Organize codes
 
+$ ng g module student
+$ ng g c student/student-listTemplate
+$ ng g s student/student
+
+
+--------------------------
 Forms
 1. go to app.module.ts
 - add ReactiveFormsModule and imports
