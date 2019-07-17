@@ -27,5 +27,14 @@ export class EmployeeComponent implements OnInit {
     }else{
       console.log('success')
     }
+    console.log(this.employeefrm)
+  }
+
+  get name(){
+    return this.employeefrm.get('name');
+  }
+
+  get email() {
+    return this.employeefrm.get('email');
   }
 }
