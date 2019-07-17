@@ -20,10 +20,13 @@ export class ContactsComponent implements OnInit {
 		  	]),
 		  	message: new FormControl()
 		  });
-  	}
-
-	get userName() {
-		return this.contactForm.get('userName'); 
 	}
+	submitContact(frm: FormGroup){
+		if(frm.controls.userName.errors){
+
+		}
+		console.log(frm)
+	}  
+
 
 }

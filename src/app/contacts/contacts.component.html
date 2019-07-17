@@ -1,11 +1,14 @@
-<form [formGroup]="contactForm" >
+<form [formGroup]="contactForm" (ngSubmit)="submitContact(contactForm)">
+	{{ userName | json }}
+	
 	<input type="text" formControlName="userName" placeholder="Please type yourname"><br>
 
-	<div *ngIf="userName.invalid && (userName.dirty || userName.touched)">
-		<div *ngIf="userName.errors.minLength">
+
+	<!-- <div *ngIf="contactForm.userName.invalid && (contactForm.userName.dirty || contactForm.userName.touched)">
+		<div *ngIf="contactForm.userName.errors.minLength">
 			Please make it more than 3 
 		</div>
-	</div>
+	</div> -->
 
 	<textarea formControlName="message"></textarea><br>
 

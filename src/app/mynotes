@@ -12,8 +12,9 @@ $ ng serve
 
 $ ng generate service auth
 
-
 $ ng generate class User
+
+$ ng g module Module_name
 ----------------------------------------------
 
 Forms
@@ -24,3 +25,16 @@ formGroup - entire form
 formCOntrol - each field
 
 2. Reactive vs template-driven
+
+------------------------------------------------
+
+Directives
+- *ngIf , *ngFor , *ngElse
+
+<div *ngIf="true; then listTemplate else callVar"></div>
+<ng-template #listTemplate>
+    If it is true
+</ng-template>
+<ng-template #callVar>
+    This is for else
+</ng-template>
