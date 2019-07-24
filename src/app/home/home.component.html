@@ -1,0 +1,7 @@
+<h1>Home Based</h1>
+
+<ul class="list-btn">
+	<li *ngFor="let p of posts" (click)="onClick(p.id)">
+		{{ p.id }} - {{ p.title | uppercase }}
+	</li>
+</ul>
